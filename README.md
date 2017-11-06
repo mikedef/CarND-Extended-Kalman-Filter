@@ -1,8 +1,16 @@
 # Extended Kalman Filter Project 
 
+## Michael DeFilippo
 
-
+#### Please see my [project code](https://github.com/mikedef/CarND-Extended-Kalman-Filter/tree/master/src) for any questions regarding implementation.
 ---
+
+** Extended Kalman Filter (EKF) Project**
+---
+The goals/steps of this project are the following:
+- Install and build EKF project starter code alonge with the project [simulator](https://github.com/udacity/self-driving-car-sim/releases). 
+- Implement an EKF in C++ based off the previous lessons using the project starter code and simulator. 
+- Create an algorithm that can accomplish better accuracy than [.11, .11, 0.52, 0.52]. 
 
 ## Important Dependencies
 
