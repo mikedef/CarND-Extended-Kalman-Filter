@@ -59,3 +59,14 @@ In FusionEKF I first predict the state of the vehicle, then I update the state b
 
 The EKF can handle both Radar and Lidar measurements. Essentially this is handled by either sending the Lidar measurements directily to a Kalman filter, or sending the Radar measurements to an EKF after converting the coordinats from polar to cartiesion. 
 
+## What's the difference between the combined radar/lidar EKF versus pure radar EKF or a pure lidar EKF?
+Below I compare the accuracy of running an EKF with both radar and lidar measurements, versus having just radar measurements, or just lidar measurements. It is clear below that the more data (radar and lidar) will provide a more accurate state estimation.
+
+![alt text](EKF_RadarPlusLidar.png)
+EKF with Radar and Lidar Measurements
+
+![alt text](EKF_NoLidar.png) 
+EKF with Radar and No Lidar Measurements
+
+![alt text](KF_NoRadar.png)
+EKF with Lidar and No Radar Measurements
