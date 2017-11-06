@@ -41,7 +41,7 @@ Please (do your best to) stick to [Google's C++ style guide](https://google.gith
 #### The output coordinates px, py, vx, vy must have an RMSE <= [.11, .11, 0.52, 0.52] when using the input file provided. 
 ![alt text](EKF_RadarPlusLidar_ZoomedOut.png)
 
-The accuracy for px,py,vx,vy respectivily are as shown in the above image of 0.097,0.085,0.451,0.44. This is less than the required accuracy foe the EKF algorithm. 
+The accuracy for px,py,vx,vy respectively are as shown in the above image of 0.097,0.085,0.451,0.44. This is less than the required accuracy for the EKF algorithm. 
 
 ## Follows the Correct Algorithm
 #### Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
@@ -49,15 +49,15 @@ The standard Kalman and Extended Kalman filter implimentations can be found in t
 
 #### Kalman Filter algorithm handles the first measurements appropriately.
 
-The first measurements are handled in FusionEKF.cpp. The program is robust enough to take in either a Laser or Radar measurement first and then initialize the EKF approriatly. 
+The first measurements are handled in FusionEKF.cpp. The program is robust enough to take in either a Laser or Radar measurement first and then initialize the EKF appropriately. 
 
 #### Kalman Filter algorithm first predicts then updates.
 
-In FusionEKF I first predict the state of the vehicle, then I update the state based on the incoming Laser or Radar measuremtents. 
+In FusionEKF I first predict the state of the vehicle, then I update the state based on the incoming Laser or Radar measurements. 
 
 #### Kalman Filter can handle radar and lidar measurements.
 
-The EKF can handle both Radar and Lidar measurements. Essentially this is handled by either sending the Lidar measurements directily to a Kalman filter, or sending the Radar measurements to an EKF after converting the coordinats from polar to cartiesion. 
+The EKF can handle both Radar and Lidar measurements. Essentially this is handled by either sending the Lidar measurements directly to a Kalman filter, or sending the Radar measurements to an EKF after converting the coordinates from polar to cartesian. 
 
 ## What's the difference between the combined radar/lidar EKF versus pure radar EKF or a pure lidar EKF?
 Below I compare the accuracy of running an EKF with both radar and lidar measurements, versus having just radar measurements, or just lidar measurements. It is clear below that the more data (radar and lidar) will provide a more accurate state estimation.
