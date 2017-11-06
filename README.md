@@ -40,6 +40,7 @@ Please (do your best to) stick to [Google's C++ style guide](https://google.gith
 ## Accuracy
 
 The output coordinates px, py, vx, vy must have an RMSE <= [.11, .11, 0.52, 0.52] when using the input file provided. 
+![alt text](EKF_RadarPlusLidar_ZoomedOut.png)
 
 ## Follows the Correct Algorithm
 #### Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
